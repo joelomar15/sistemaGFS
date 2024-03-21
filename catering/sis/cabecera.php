@@ -87,6 +87,7 @@ background: linear-gradient(357deg, rgba(0,51,26,1) 0%, rgba(0,102,51,1) 50%, rg
                         <a class="dropdown-item" href="../../listarClientes.php">Clientes</a>
                         <a class="dropdown-item" href="../../vender.php">Vender</a>
                         <a class="dropdown-item" href="../../ventas.php">Ventas</a>
+                        <a class="dropdown-item" href="../../CierreCaja.php">Cierre de Caja</a>
                         <a class="dropdown-item" href="../../reportes.php">Reportes Excel</a>
                         <a class="dropdown-item" href="../../reporteVentas.php">Reportes PDF</a>
                         

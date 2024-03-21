@@ -1,15 +1,19 @@
 <?php 
     include('conexion.php');
+    include_once("ModeloCierreCaja.php");
+    $cierreCaja = new CierreCaja();
+
  
     $fecha1=$_REQUEST['fecha1'];
     $fecha2=$_REQUEST['fecha2'];
+
+    $validar=$cierreCaja->validarReporte($fecha1,$fecha2);
+    
+    if(!$validar){
+        echo '<script> alert("No existe ningun Cierre de Caja en la Fecha Ingresada.")</script>';
+        echo '<script> window.close();</script>';
+    }
     //$empresa=$_REQUEST['empresa'];
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -79,6 +83,7 @@
                         <a class="dropdown-item" href="listarClientes.php">Clientes</a>
                         <a class="dropdown-item" href="vender.php">Vender</a>
                         <a class="dropdown-item" href="ventas.php">Ventas</a>
+                        <a class="dropdown-item" href="ventas.php">Cierre de Caja</a>
                         <a class="dropdown-item" href="reportes.php">Reportes Excel</a>
                         <a class="dropdown-item" href="reporteVentas.php">Reportes PDF</a>
                         

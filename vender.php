@@ -22,12 +22,12 @@ $granTotal = 0;
 
 
 
- 	$conexion=mysqli_connect('localhost','root','','ventas');
+ 	$conexion=mysqli_connect('localhost','root','','aseguradora2');
 	$sql="SELECT id,descripcion from productos";
 	$result=mysqli_query($conexion,$sql);
-	$query25="select * from configuracion where nombre='transferencias' and descripcion='si'";
-    $enviar25=mysqli_query($conexion,$query25);
-    $ver25=mysqli_fetch_array($enviar25);
+	//$query25="select * from configuracion where nombre='transferencias' and descripcion='si'";
+    //$enviar25=mysqli_query($conexion,$query25);
+    //$ver25=mysqli_fetch_array($enviar25);
 	$sql1="SELECT id,nombre,cedula from clientes";
 	$result1=mysqli_query($conexion,$sql1);
 ?>
@@ -129,17 +129,7 @@ $granTotal = 0;
 	<h3>Total: <?php echo $granTotal; ?></h3>
 	<form action="./terminarVenta.php" method="POST" al>
 	<section style="text-align: center;">
-		<?php
-			if ($ver25['id']>0) {
-				echo "<select name='transaccion' style:'width:50%;'>
-					<option>Efectivo</option>
-					<option>Transferencia</option>
-				</select>
-				<br>
-				<br>";
-			}
 
-		?>
 		<input autocomplete="off" type="text" name="cliente" id="cliente" style="width: 50%" required="">
 			
 		<br><br>

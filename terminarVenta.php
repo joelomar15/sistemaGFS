@@ -9,7 +9,7 @@ use Mike42\Escpos\EscposImage;
 use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 $cliente = $_POST["cliente"];
 $total = $_POST["total"];
-include_once "base_de_datos.php";
+include_once "conexion.php";
 $mensaje="";
 
 $ahora = date("Y-m-d H:i:s");
@@ -20,7 +20,7 @@ $query25="select * from clientes where cedula='$cliente'";
 if ($ver25['id']>0) {
     $cliente =$ver25['id'];
 $query25="select * from configuracion where nombre='transferencias' and descripcion='si'";
-$enviar25=mysqli_query($conexion,$query25);
+$enviar25=mysqli_query($db,$query25);
 $ver25=mysqli_fetch_array($enviar25);
 if ($ver25['id']>0) {
    $sentencia = $base_de_datos->prepare("INSERT INTO ventas(id_cliente,fecha, total) VALUES (?, ?, ?);");

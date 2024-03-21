@@ -75,6 +75,7 @@ include'conexion.php';
                         <a class="dropdown-item" href="listarClientes.php">Clientes</a>
                         <a class="dropdown-item" href="vender.php">Vender</a>
                         <a class="dropdown-item" href="ventas.php">Ventas</a>
+                        <a class="dropdown-item" href="CierreCaja.php">Cierre de Caja</a>
                         <a class="dropdown-item" href="reportes.php">Reportes Excel</a>
                         <a class="dropdown-item" href="reporteVentas.php">Reportes PDF</a>
                         
